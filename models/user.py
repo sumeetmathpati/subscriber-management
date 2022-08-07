@@ -2,7 +2,7 @@ from pydantic import EmailStr
 from .utils import PyObjectId
 
 
-class UserModel(BaseModel):
+class User(BaseModel):
     id: PyObjectId
     name: str = None
     email: EmailStr
