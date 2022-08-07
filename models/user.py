@@ -1,0 +1,15 @@
+from pydantic import EmailStr
+from .utils import PyObjectId
+
+
+class UserModel(BaseModel):
+    id: PyObjectId
+    name: str = None
+    email: EmailStr
+    password: str
+
+    class Config:
+        allow_population_by_field_name = True
+        arbitrary_types_allowed = True
+        json_encoders = {ObjectId: str}
+
