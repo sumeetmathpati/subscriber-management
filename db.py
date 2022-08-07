@@ -1,4 +1,4 @@
-import motor
+import motor.motor_asyncio
 
-client = motor.motor_asyncio.AsyncIOMotorClient(os.environ["mongodb://localhost:27017"])
+client = motor.motor_asyncio.AsyncIOMotorClient("mongodb://localhost:27017")
 db = client.subscriber_management
