@@ -1,4 +1,4 @@
-from pydantic import EmailStr
+from pydantic import EmailStr, BaseModel
 from .utils import PyObjectId
 
 
